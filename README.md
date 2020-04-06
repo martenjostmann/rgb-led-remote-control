@@ -1,20 +1,52 @@
-LED-Control
+# Raspberry Pi RGB Led Strip Remote Control #
 
-1. Goal
-The goal of this Project is to control my LED lightning System by using and Android App
+This project aims to control a RGB LED light strip using IR Sensor, Raspberry pi, Lirc, Python and an Android App.
 
-2. Reflections
-What I need is to programm an Android App with basic function to control the LED System, an API to communicate with the backend and a backend with the business logic
+as from Kernel 4.19.42-v7+
 
-the API should become a json File or only paramaters (Think about it later)
-	-RESTful API with Flask
+I use a Raspberry Pi 2 with Kernel Version 4.19.97-v7+ (You can check your Kernel using `uname -a`).
+
+##Steps##
+
+1. Install and Configurate LIRC
+2. Setup IR Sender and IR Receiver
+3. Setup and run API with the help of Linux Screen
+4. Install Android App
+5. Ready
 
 
-3. LIRC
-	-Lirc is a Framework to setuop IR Remote Communication
+##1. Install and Configurate LIRC##
 
-	LIRC important commands
-		-mode2 -d /dev/lirc0 #Tests the IR Connection (dtoverlay=gpio-ir,gpio_pin=21 - for receive task and dtoverlay=gpio-ir-tx,gpio_pin=21 - for send task) must stop Demon with command below (/boot/config.txt)
-		-sudo /etc/init.d/lircd [start][stop][restart][status]
-		-irsend SEND_ONCE ledcontrol KEY_F2 #sends code
-	-explanation video: https://www.youtube.com/watch?v=pK6Rn8hp784&feature=youtu.be
+First of all the */boot/config.txt* need to be edited.
+
+`sudo nano /boot/config.txt`
+
+In this file you add these lines and save file (CTRL+o):
+`dtoverlay=gpio-ir,gpio_pin=21`
+`dtoverlay=gpio-ir-tx,gpio_pin=21`
+
+The first line is for receiving codes and the second line is for sending codes.
+It's Important that you only comment in the line that you want to use. When you want to receive codes comment only the first line in otherwise it wouldn't work. 
+The pin *21* will be important in step 2.
+
+Next you install lirc with the following comands:
+
+`sudo apt-get update`
+`sudo apt-get install lirc`
+
+Then you need to change some lines in the `/etc/lirc/lirc_options.conf` file (Hardware.conf didn't exists anymore):
+
+`[lircd]
+driver = default
+device = /dev/lirc0
+
+[lircmd]
+uinput = True`
+
+Now reboot your system
+
+`sudo reboot`
+
+##2. Setup IR Sender and IR Receiver##
+
+Connect your IR Receiver like in the picture below.
