@@ -66,6 +66,8 @@ Connect your IR Receiver and Sender like in the picture below. I use the same pi
 
 ![Schematics](Pictures/Board_2.jpeg)
 
+![Schematics](Pictures/Board_3.jpeg)
+
 ![Schematics](Pictures/Pins.jpeg)
 
 
