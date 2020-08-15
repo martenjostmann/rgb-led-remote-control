@@ -8,11 +8,13 @@ I use a Raspberry Pi 2 with Kernel Version 4.19.97-v7+ (You can check your Kerne
 
 ## Steps ##
 
+
 1. Install and Configurate LIRC
 2. Setup IR Sender and IR Receiver
 3. Setup and run API with the help of Linux Screen
 4. Install Android App
 5. Ready
+6. Conda
 
 
 ## 1. Install and Configurate LIRC ##
@@ -30,7 +32,7 @@ The first line is for receiving codes and the second line is for sending codes.
 It's Important that you only comment in the line that you want to use. When you want to receive codes comment only the first line in otherwise it wouldn't work. 
 The pin *21* will be important in step 2.
 
-Next you install lirc with the following comands:
+Next you install lirc with the following commands:
 
 `sudo apt-get update`
 `sudo apt-get install lirc`
@@ -64,7 +66,7 @@ Connect your IR Receiver and Sender like in the picture below. I use the same pi
 
 ![Schematics](Pictures/Board_1.jpeg)
 
-![Schematics](Pictures/Board_2.jpeg)
+
 
 ![Schematics](Pictures/Board_3.jpeg)
 
@@ -135,7 +137,7 @@ Install git and clone this repository to your Raspberry Pi
 
 `git clone https://github.com/martenjostmann/rgb-led-remote-control.git`
 
-Change IP-Address in com.py file (LED-Control-API\ControllerClass\API\com.py) to your local Ip-Addresse of the Raspberry Pi
+Change IP-Address in com.py file (LED-Control-API\ControllerClass\API\com.py) to your local Ip-Address of the Raspberry Pi
 
 You need to setup a virtual environment to use the module flask which is important work with the API. I found a good explanation [here](https://linoxide.com/linux-how-to/install-flask-python-ubuntu/)
 Another way to setup a virtual environment is to use Anaconda. I've provided an environment.yml
@@ -144,7 +146,7 @@ Now you can run the com.py file by navigating into the folder and type (The prer
 
 `python3 com.py`
 
-To run this code in the Background of your Resparry Pi you can use the Screen feature:
+To run this code in the Background of your Raspberry Pi you can use the Screen feature:
 
 ```
 apt-get install screen
@@ -155,6 +157,20 @@ If you want to learn more about Linux Screen look up [this](https://linuxize.com
 
 
 
-### 4. Install Android App ###
+## 4. Install Android App ###
 
-Last but not least install the App on your mobile phone and your ready to go.
+Last but not least install the App on your mobile phone and you’re ready to go.
+
+
+## Conda
+
+Use [conda](https://docs.conda.io/en/latest/) to easily setup a virtual environment with all necessary dependencies:
+
+### Create environment
+
+`conda env create -f environment.yml`
+
+After that activate the environment
+
+`source activate <name-of-environment>`
+

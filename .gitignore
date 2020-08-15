@@ -1,0 +1,7 @@
+**/flaskprojectenv
+*.sln
+LED-Control.pyproj
+**/BusinessLogic
+**/__pycache__
+.idea
+api_key.json

@@ -92,3 +92,174 @@ Traceback (most recent call last):
   File "P:\Programme\Anaconda\lib\site-packages\flask\app.py", line 2130, in make_response
     " {rv.__class__.__name__}.".format(rv=rv)
 TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a int.
+Exception on /api/v1/com/20om [GET]
+Traceback (most recent call last):
+  File "P:\Programme\Anaconda\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "P:\Programme\Anaconda\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "P:\Programme\Anaconda\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "P:\Programme\Anaconda\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "P:\Programme\Anaconda\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "P:\Programme\Anaconda\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\Git\Private\RaspberryPi\RaspberryProjects\LED-Control\ControllerClass\API\com.py", line 17, in api_all
+    subprocess.call(["irsend", "SEND_ONCE", "ledcontrol", code])
+  File "P:\Programme\Anaconda\lib\subprocess.py", line 339, in call
+    with Popen(*popenargs, **kwargs) as p:
+  File "P:\Programme\Anaconda\lib\subprocess.py", line 800, in __init__
+    restore_signals, start_new_session)
+  File "P:\Programme\Anaconda\lib\subprocess.py", line 1207, in _execute_child
+    startupinfo)
+  File "c:\program files (x86)\microsoft visual studio\2019\enterprise\common7\ide\extensions\microsoft\python\core\debugpy\_vendored\pydevd\_pydev_bundle\pydev_monkey.py", line 612, in new_CreateProcess
+    return getattr(_subprocess, original_name)(app_name, cmd_line, *args)
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+Exception on /api/v1/com/10 [GET]
+Traceback (most recent call last):
+  File "P:\Programme\Anaconda\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "P:\Programme\Anaconda\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "P:\Programme\Anaconda\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "P:\Programme\Anaconda\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "P:\Programme\Anaconda\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "P:\Programme\Anaconda\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\Git\Private\RaspberryPi\RaspberryProjects\LED-Control\ControllerClass\API\com.py", line 17, in api_all
+    subprocess.call(["irsend", "SEND_ONCE", "ledcontrol", code])
+  File "P:\Programme\Anaconda\lib\subprocess.py", line 339, in call
+    with Popen(*popenargs, **kwargs) as p:
+  File "P:\Programme\Anaconda\lib\subprocess.py", line 800, in __init__
+    restore_signals, start_new_session)
+  File "P:\Programme\Anaconda\lib\subprocess.py", line 1207, in _execute_child
+    startupinfo)
+  File "c:\program files (x86)\microsoft visual studio\2019\enterprise\common7\ide\extensions\microsoft\python\core\debugpy\_vendored\pydevd\_pydev_bundle\pydev_monkey.py", line 612, in new_CreateProcess
+    return getattr(_subprocess, original_name)(app_name, cmd_line, *args)
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+Exception on /api/v1/com/10 [GET]
+Traceback (most recent call last):
+  File "P:\Programme\Anaconda\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "P:\Programme\Anaconda\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "P:\Programme\Anaconda\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "P:\Programme\Anaconda\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "P:\Programme\Anaconda\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "P:\Programme\Anaconda\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\Git\Private\RaspberryPi\RaspberryProjects\LED-Control\ControllerClass\API\com.py", line 17, in api_all
+    subprocess.call(["irsend", "SEND_ONCE", "ledcontrol", code])
+  File "P:\Programme\Anaconda\lib\subprocess.py", line 339, in call
+    with Popen(*popenargs, **kwargs) as p:
+  File "P:\Programme\Anaconda\lib\subprocess.py", line 800, in __init__
+    restore_signals, start_new_session)
+  File "P:\Programme\Anaconda\lib\subprocess.py", line 1207, in _execute_child
+    startupinfo)
+  File "c:\program files (x86)\microsoft visual studio\2019\enterprise\common7\ide\extensions\microsoft\python\core\debugpy\_vendored\pydevd\_pydev_bundle\pydev_monkey.py", line 612, in new_CreateProcess
+    return getattr(_subprocess, original_name)(app_name, cmd_line, *args)
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+Exception on /api/v1/com/10 [GET]
+Traceback (most recent call last):
+  File "P:\Programme\Anaconda\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "P:\Programme\Anaconda\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "P:\Programme\Anaconda\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "P:\Programme\Anaconda\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "P:\Programme\Anaconda\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "P:\Programme\Anaconda\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\Git\Private\RaspberryPi\RaspberryProjects\LED-Control\ControllerClass\API\com.py", line 17, in api_all
+    subprocess.call(["irsend", "SEND_ONCE", "ledcontrol", code])
+  File "P:\Programme\Anaconda\lib\subprocess.py", line 339, in call
+    with Popen(*popenargs, **kwargs) as p:
+  File "P:\Programme\Anaconda\lib\subprocess.py", line 800, in __init__
+    restore_signals, start_new_session)
+  File "P:\Programme\Anaconda\lib\subprocess.py", line 1207, in _execute_child
+    startupinfo)
+  File "c:\program files (x86)\microsoft visual studio\2019\enterprise\common7\ide\extensions\microsoft\python\core\debugpy\_vendored\pydevd\_pydev_bundle\pydev_monkey.py", line 612, in new_CreateProcess
+    return getattr(_subprocess, original_name)(app_name, cmd_line, *args)
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+Exception on /api/v1/com/KEY_F1 [GET]
+Traceback (most recent call last):
+  File "P:\Programme\Anaconda\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "P:\Programme\Anaconda\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "P:\Programme\Anaconda\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "P:\Programme\Anaconda\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "P:\Programme\Anaconda\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "P:\Programme\Anaconda\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\Git\Private\RaspberryPi\RaspberryProjects\LED-Control\ControllerClass\API\com.py", line 17, in api_all
+    subprocess.call(["irsend", "SEND_ONCE", "ledcontrol", code])
+  File "P:\Programme\Anaconda\lib\subprocess.py", line 339, in call
+    with Popen(*popenargs, **kwargs) as p:
+  File "P:\Programme\Anaconda\lib\subprocess.py", line 800, in __init__
+    restore_signals, start_new_session)
+  File "P:\Programme\Anaconda\lib\subprocess.py", line 1207, in _execute_child
+    startupinfo)
+  File "c:\program files (x86)\microsoft visual studio\2019\enterprise\common7\ide\extensions\microsoft\python\core\debugpy\_vendored\pydevd\_pydev_bundle\pydev_monkey.py", line 612, in new_CreateProcess
+    return getattr(_subprocess, original_name)(app_name, cmd_line, *args)
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+Exception on /api/v1/com/KEY_F1 [GET]
+Traceback (most recent call last):
+  File "P:\Programme\Anaconda\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "P:\Programme\Anaconda\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "P:\Programme\Anaconda\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "P:\Programme\Anaconda\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "P:\Programme\Anaconda\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "P:\Programme\Anaconda\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\Git\Private\RaspberryPi\RaspberryProjects\LED-Control\ControllerClass\API\com.py", line 25, in api_all
+    subprocess.call(["irsend", "SEND_ONCE", "ledcontrol", code])
+  File "P:\Programme\Anaconda\lib\subprocess.py", line 339, in call
+    with Popen(*popenargs, **kwargs) as p:
+  File "P:\Programme\Anaconda\lib\subprocess.py", line 800, in __init__
+    restore_signals, start_new_session)
+  File "P:\Programme\Anaconda\lib\subprocess.py", line 1207, in _execute_child
+    startupinfo)
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+Exception on /api/v1/com/KEY_F1 [GET]
+Traceback (most recent call last):
+  File "P:\Programme\Anaconda\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "P:\Programme\Anaconda\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "P:\Programme\Anaconda\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "P:\Programme\Anaconda\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "P:\Programme\Anaconda\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "P:\Programme\Anaconda\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\Git\Private\RaspberryPi\RaspberryProjects\LED-Control\ControllerClass\API\com.py", line 25, in api_all
+    subprocess.call(["irsend", "SEND_ONCE", "ledcontrol", code])
+  File "P:\Programme\Anaconda\lib\subprocess.py", line 339, in call
+    with Popen(*popenargs, **kwargs) as p:
+  File "P:\Programme\Anaconda\lib\subprocess.py", line 800, in __init__
+    restore_signals, start_new_session)
+  File "P:\Programme\Anaconda\lib\subprocess.py", line 1207, in _execute_child
+    startupinfo)
+FileNotFoundError: [WinError 2] The system cannot find the file specified
